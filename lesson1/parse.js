@@ -20,4 +20,25 @@ var worlds = "Lorem Ipsum is simply dummy text of the " +
 
 var slog = prompt("Введите слово: ");
 
+var spisok = [];
+var c = 0;
+var slovo = '';
+for(var i = 0; i < worlds.length; i++){
 
+    if(worlds[i] != ' '){
+        slovo = slovo + worlds[i];
+    }
+    else{
+        var sovp = slovo.toUpperCase().indexOf(slog.toUpperCase(),0);
+   
+    if(sovp !== -1){
+    
+        spisok[spisok.length] = slovo;
+        c++;
+                    }
+    
+        slovo = '';
+    }
+}
+console.log(spisok);
+console.log("Повторяется " + c + " раз.");
